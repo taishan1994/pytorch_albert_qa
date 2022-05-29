@@ -52,7 +52,7 @@ python train.py
 - albert-base：train_batch_size=32, max_seq_len=512, num_train_epochs=2,  learning_rate = 3e-5
 
 ### 指标
-
+需要注意的是，我这里计算的f1是当预测和真实答案完全一致才算正确。
 | 模型名       | loss   | precision | recall | f1     |
 | ------------ | ------ | --------- | ------ | ------ |
 | albert-tiny  | 1.4956 | 0.3340    | 0.3401 | 0.3370 |
@@ -230,7 +230,7 @@ python train.py
 
 Q：如果文本里面有多个answer呢？
 
-A：这种就是multi-san extraction，可以去找找论文，这里提供一篇：[eladsegal/tag-based-multi-span-extraction: The official implementation of EMNLP 2020, "A Simple and Effective Model for Answering Multi-span Questions". (github.com)](https://github.com/eladsegal/tag-based-multi-span-extraction)
+A：这种就是multi-span extraction，可以去找找论文，这里提供一篇：[eladsegal/tag-based-multi-span-extraction: The official implementation of EMNLP 2020, "A Simple and Effective Model for Answering Multi-span Questions". (github.com)](https://github.com/eladsegal/tag-based-multi-span-extraction)
 
 Q：怎么将QA的思想运用到实体识别中？
 
