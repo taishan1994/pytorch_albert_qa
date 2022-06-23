@@ -11,15 +11,10 @@
 # 目录
 
 - crmc2018：数据。
-
 - model_hub：存放预训练模型的位置，在config.py里面指定```self.bert_model = './model_hub/voidful-albert-chinese-tiny/'```，如果不这么指定，可以使用这种方式：```self.bert_model = 'voidful/albert_chinese_base'```，这种会下载对应的模型，具体模型名可以去这里查看：[brightmart/albert_zh: A LITE BERT FOR SELF-SUPERVISED LEARNING OF LANGUAGE REPRESENTATIONS, 海量中文预训练ALBERT模型 (github.com)](https://github.com/brightmart/albert_zh)。
-
 - output：保存训练好的模型。
-
 - config.py：参数配置。
-
 - cut_sentence.py：分句，并对标签进行重整。
-
 - data_loader.py：数据加载。
 - decode_utils.py：评价指标计算。
 - model.py：模型，config.py里面有self.use_ori_albert参数，如果设置为True，直接使用hugging face里面的AutoModelForQuestionAnswering，否则使用model.py里面的BertQA。很奇怪的是BertQA的代码是从ForQuestionAnswering里面摘出来的，但用来进行训练基本没有效果。
